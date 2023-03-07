@@ -1,0 +1,46 @@
+<body>
+<script>
+var str1=prompt("Введите число a")
+var str2=prompt("Введите число b")
+a=parseInt(str1)
+b=parseInt(str2)
+let min = Infinity;
+let num = [];
+let nlen = 0
+let minnum = [];
+for (i = a; i<=b; i++)
+{
+	for (let j = 1; j <= i; j++) {
+  		if (i % j == 0) {
+    			num.push(j);
+    			
+  		}
+	}
+	
+	nlen = num.length;
+	if (nlen < min) {
+		min = nlen;
+		minnum.push(i);
+		num.length = 0;	
+		continue
+	}
+	if (nlen == min) {
+		minnum.push(i);
+		num.length = 0;	
+	}
+	else {
+		num.length = 0;	
+	}
+	
+}
+
+if (minnum.length > 1) {
+	alert(`Числа с минимальным количеством делителей - ${minnum}`)
+}
+else {
+	alert(`Число с минимальным количеством делителей - ${minnum}`)
+}
+
+
+</script>
+</body>
