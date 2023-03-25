@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+
+function func() 
+{
+	var arr = [];
+	for (var i = 0; i < 10; i++) {
+		arr[i] = Math.floor(Math.random() * (10 - (-10) + 1) + (-10));
+	}
+	let minPositive = Infinity;
+	let index = -1;
+
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > 0 && arr[i] < minPositive) {
+    			minPositive = arr[i];
+    			index = i;
+  		} 	
+		else if (arr[i] === minPositive && i > index) {
+			index = i;
+  		}
+	}
+alert("Массив: " + arr + "\nМинимальный положительный элемент: " + minPositive + ", его индекс: " + index);
+}
+</script>
+</head>
+<body>
+<input type="button" value="Посчитать" onClick="func();">
+</body>
+</html>
