@@ -1,0 +1,64 @@
+<html>
+<head>
+<script>
+function func() {
+input = prompt("Введите символ");
+
+var type = "";
+var color = "";
+var backgroundColor = "";
+var fontStyle = "";
+var arr = ["!","@","#","№","$",";",":","%","^","&","?",
+"*","(",")","-","_","+","=","[","]","{","}","'","\\","|",
+"/","<",">",",","."];
+
+if (isNaN(input)) {
+	for (var i = 0; i<arr.length; i++) {
+    		if (input === arr[i]) {
+      			type = "знаком";
+      			color = "green";
+      			backgroundColor = "pink";
+      			fontStyle = "Verdana";
+			break;
+    		}
+		else {
+			type = "буквой";
+  			color = "red";
+  			backgroundColor = "yellow";
+  			fontStyle = "Italic";
+
+		}
+  	}
+} 
+else {
+    	type = "цифрой";
+    	color = "blue";
+    	backgroundColor = "green";
+    	fontStyle = "Arial";
+}
+
+
+s1 = "<body><h3>";
+st = "Символ " + input + " является " + type;
+s2 = "</h3></body>";
+g1 = "<head><style> h3{background-color:";
+g3="}h3{color:";
+g5 = "}h3{font-family: ";
+g7 = "}</style></head>";
+
+g=g1+color+g3+backgroundColor+g5+fontStyle+g7;
+s=s1+st+s2;
+
+w=window.open("","","width=200,height=200");
+w.document.open();
+w.document.write(g);
+w.document.write(s);
+w.document.close()
+}
+</script>
+</head>
+<body>
+<input type = "button" value = "START" onclick = "func()">
+<input type = "button" value = "CLOSE" onclick = "w.close()">
+</body>
+</html>
