@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+body{background-color:#dfd8c5;}
+</style>
+<script>
+
+function func(type) {
+
+
+if(type) {
+    	str = "Перейти на сайт";
+	var cv=document.getElementById('info');
+	cv.innerHTML= str;
+    
+}
+else {
+    	str = "";
+	var cv=document.getElementById('info');
+	cv.innerHTML= str;
+    
+}
+}
+</script>
+</head>
+<body>
+
+<form>
+<h2 name ="link" id='link' 
+onMouseOver="func(true);" onMouseOut="func(false);" >
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+Сайт</a></h2>
+
+<h3 name="info" id='info' type="text" size="50"></h3>
+</form>
+</body>
+</html>

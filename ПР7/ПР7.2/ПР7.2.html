@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: separate;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+</style>
+<script>
+function swapImages() {
+  var input1 = document.getElementById("input1").value;
+  var input2 = document.getElementById("input2").value;
+  
+  if(isNaN(input1) || isNaN(input2) || input1 < 1 || input1 > 3 || input2 < 1 || input2 > 3) {
+    alert("Неправильный ввод! Введите числа от 1 до 3.");
+    return;
+  }
+  if (input1 == 1) id1 = "pic1";
+  if (input1 == 2) id1 = "pic2";
+  if (input1 == 3) id1 = "pic3";
+  if (input2 == 1) id2 = "pic1";
+  if (input2 == 2) id2 = "pic2";
+  if (input2 == 3) id2 = "pic3";
+  var img1 = document.getElementById(id1);
+  var img2 = document.getElementById(id2);
+  
+  var temp = img1.src;
+  img1.src = img2.src;
+  img2.src = temp;
+}
+</script>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td><img src="image1.jpg" id = "pic1"></td>
+    <td><img src="image2.jpg" id = "pic2"></td>
+    <td><img src="image3.jpg" id = "pic3"></td>
+  </tr>
+</table>
+
+
+<p for="input1">Номер первой картинки:</p>
+<input type="text" id="input1">
+
+<p for="input2">Номер второй картинки:</p>
+<input type="text" id="input2">
+
+<button onclick="swapImages()">Переставить</button>
+
+
+
+</body>
+</html
