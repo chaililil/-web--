@@ -14,7 +14,7 @@ var arr = ["!","@","#","№","$",";",":","%","^","&","?",
 "/","<",">",",","."];
 
 if (isNaN(input)) {
-	for (var i = 0; i<arr.length; i++) {
+	for (let i = 0; i<arr.length; i++) {
     		if (input === arr[i]) {
       			type = "знаком";
       			color = "green";
@@ -39,15 +39,15 @@ else {
 }
 
 
-s1 = "<h3>";
-s2 = "</h3>";
-st = "Символ " + input + " является " + type;
-g1 = "<style> h3{background-color:";
-g3="}h3{color:";
-g5 = "}h3{font-family: ";
-g7 = "}</style>";
-g=g1+color+g3+backgroundColor+g5+fontStyle+g7;
-s=s1+st+s2;
+var s1 = "<h3>";
+var s2 = "</h3>";
+var st = "Символ " + input + " является " + type;
+var g1 = "<style> h3{background-color:";
+var g3 = "}h3{color:";
+var g5 = "}h3{font-family: ";
+var g7 = "}</style>";
+var g = g1+color+g3+backgroundColor+g5+fontStyle+g7;
+var s = s1+st+s2;
 
 
 document.write(g);
