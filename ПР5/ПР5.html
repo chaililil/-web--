@@ -5,11 +5,11 @@
 function func() 
 {
 	var arr = [];
-	for (var i = 0; i < 10; i++) {
+	for (let i = 0; i < 10; i++) {
 		arr[i] = Math.floor(Math.random() * (10 - (-10) + 1) + (-10));
 	}
-	let minPositive = Infinity;
-	let index = -1;
+	var minPositive = Infinity;
+	var index = -1;
 
 	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] > 0 && arr[i] < minPositive) {
