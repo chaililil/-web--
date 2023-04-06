@@ -4,11 +4,11 @@ var str1=prompt("Введите число a")
 var str2=prompt("Введите число b")
 a=parseInt(str1)
 b=parseInt(str2)
-let min = Infinity;
-let num = [];
-let nlen = 0
-let minnum = [];
-for (i = a; i<=b; i++)
+var min = Infinity;
+var num = [];
+var nlen = 0
+var minnum = [];
+for (let i = a; i<=b; i++)
 {
 	for (let j = 1; j <= i; j++) {
   		if (i % j == 0) {
@@ -20,7 +20,7 @@ for (i = a; i<=b; i++)
 	nlen = num.length;
 	if (nlen < min) {
 		min = nlen;
-		minnum.push(i);
+		minnum = [i];
 		num.length = 0;	
 		continue
 	}
