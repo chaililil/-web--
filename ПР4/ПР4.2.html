@@ -1,13 +1,13 @@
 <body>
 <script>
 var A = [];
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
 	A[i] = Math.floor(Math.random() * (15 - 10 + 1) + 10);
 }
-let min = Infinity;
+var min = Infinity;
 var minnum = [];
 var minind = [];
-for (var i = 0; i < A.length; i++) {
+for (let i = 0; i < A.length; i++) {
 	if (A[i] < min) {
 		min = A[i];
 		minnum = [A[i]];
