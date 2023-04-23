@@ -1,0 +1,58 @@
+<head>
+<style>
+#im2 {position:absolute; left:10; top:10}
+</style>
+</head>
+<body>
+<img src ="background.png" id = "im1" width="50%" /> 
+<img src ="model.png" id = "im2" />
+<script type="text/JavaScript">
+function f()
+{
+  if (dir == "down") {
+    y=y+10
+    r2.style.top = y
+    if (y >= 250) {
+        dir = "right1"
+	if (x >= 300) {
+	    dir = "stop"
+	}
+    }
+  }
+  
+ else if (dir == "right1")
+  {
+    x=x+10
+    r2.style.left = x   
+    if (x >= 150) {
+        dir = "up"
+	
+    }
+  }
+  else if (dir == "up")
+  {
+    y=y-10
+    r2.style.top = y
+    if (y <= 10) {
+        dir = "right2"
+    }
+  }
+ else if (dir == "right2")
+  {
+    x=x+10
+    r2.style.left = x   
+    if (x >= 300) {
+	dir = "down"
+    }
+  }
+  
+  setTimeout("f()",50);
+}
+x=0
+y=0
+dir = "down"
+r2=document.getElementById("im2")
+
+f();
+</script>
+</body>
